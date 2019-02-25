@@ -1,0 +1,21 @@
+#!/bin/bash
+
+clear
+
+cat $(pwd)/$1 | perl -lpe '$_=unpack"B*",$_' > $(pwd)/$2.bin
+
+clear
+
+gvfs-set-attribute $(pwd)/*.bin metadata::custom-icon file://$(pwd)/icons/exec.svg
+
+clear
+
+xdg-mime install $(pwd)/shbin-mime.xml
+
+clear
+
+chmod +x $(pwd)/$2.bin
+
+clear
+
+echo "DONE!"

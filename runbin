@@ -1,0 +1,13 @@
+#!/bin/bash
+
+clear
+
+cat $(pwd)/$1 | perl -lpe '$_=pack"B*",$_' > $(pwd)/.runthis.sh
+
+clear
+
+bash $(pwd)/.runthis.sh
+
+sleep 0.5
+
+rm $(pwd)/.runthis.sh
