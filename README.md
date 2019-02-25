@@ -2,8 +2,8 @@
 
 ## Create Executable BIN file from Shell Script..
 
-	<code>$ ./mkbin sample.sh sample</code>
+	$ ./mkbin sample.sh sample
 
 ## Run BIN file..
 
-	<code>$ ./runbin sample.bin</code>
+	$ ./runbin sample.bin
